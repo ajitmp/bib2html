@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Publications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .publication {
+            margin-bottom: 20px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .author, .journal, .booktitle, .publisher, .year, .pages {
+            font-style: italic;
+        }
+        .title a {
+            text-decoration: none;
+            color: #000;
+        }
+        .title a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Research Publications</h1>
+    
+    <h2>Journal Articles</h2>
+    <ul>
+        {% for entry in entries if entry.ENTRYTYPE == 'article' %}
+            <li class="publication">
+                <span class="author">{{ entry.author }}.</span>
+                <span class="title">
+                    <a href="{{ entry.source }}">{{ entry.title }}</a>
+                </span>
+                <span class="journal">{{ entry.journal }}</span>
+                <span class="volume">{{ entry.volume }}</span>,
+                <span class="number">no. {{ entry.number }}</span>
+                (<span class="year">{{ entry.year }}</span>):
+                <span class="pages">{{ entry.pages }}</span>.
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Conference Papers</h2>
+    <ul>
+        {% for entry in entries if entry.ENTRYTYPE == 'conference' or entry.ENTRYTYPE == 'inproceedings' %}
+            <li class="publication">
+                <span class="author">{{ entry.author }}.</span>
+                <span class="title">
+                    <a href="{{ entry.source }}">{{ entry.title }}</a>
+                </span>
+                In <span class="booktitle">{{ entry.booktitle }}</span>,
+                <span class="pages">{{ entry.pages }}</span>.
+                {% if entry.publisher %}
+                    <span class="publisher">{{ entry.publisher }}</span>,
+                {% elif entry.organization %}
+                    <span class="organization">{{ entry.organization }}</span>,
+                {% endif %}
+                <span class="year">{{ entry.year }}</span>.
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

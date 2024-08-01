@@ -1,0 +1,39 @@
+[
+  {
+    "publisher": "IEEE",
+    "year": "2022",
+    "pages": "1059--1068",
+    "number": "1",
+    "volume": "19",
+    "journal": "IEEE Transactions on Industrial Informatics",
+    "author": "Rathee, Geetanjali and Garg, Sahil and Kaddoum, Georges and Choi, Bong Jun and Hassan, Mohammad Mehedi and AlQahtani, Salman A",
+    "title": "TrustSys: Trusted decision making scheme for collaborative artificial intelligence of things",
+    "ENTRYTYPE": "article",
+    "ID": "rathee2022trustsys",
+    "source": "https://ieeexplore.ieee.org/abstract/document/9771343"
+  },
+  {
+    "publisher": "MDPI",
+    "year": "2021",
+    "pages": "212",
+    "number": "1",
+    "volume": "15",
+    "journal": "Energies",
+    "author": "Kumar, Ajit and Saxena, Neetesh and Jung, Souhwan and Choi, Bong Jun",
+    "title": "Improving detection of false data injection attacks using machine learning with feature selection and oversampling",
+    "ENTRYTYPE": "article",
+    "ID": "kumar2021improving",
+    "source": "https://www.mdpi.com/1996-1073/15/1/212"
+  },
+  {
+    "organization": "IEEE",
+    "year": "2018",
+    "pages": "364--371",
+    "booktitle": "2018 10th International Conference on Communication Systems \\& Networks (COMSNETS)",
+    "author": "Saxena, Neetesh and Grijalva, Santiago and Choi, Bong Jun",
+    "title": "Securing restricted publisher-subscriber communications in smart grid substations",
+    "ENTRYTYPE": "inproceedings",
+    "ID": "saxena2018securing",
+    "source": "https://ieeexplore.ieee.org/abstract/document/8328220"
+  }
+]
